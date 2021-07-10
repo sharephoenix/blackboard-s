@@ -10,13 +10,13 @@ import (
 	"google.golang.org/grpc"
 )
 
-type server struct{}
+type Server struct{}
 const (
 	port = ":50051"
 )
 
 // SayHello implements helloworld.GreeterServer
-func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
+func (s *Server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	fmt.Println("######### get client request name :"+in.Name)
 	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
 }
@@ -30,7 +30,7 @@ func main() {
 	conf.MustLoad(*configFile, &c)
 
 	server := zrpc.MustNewServer(c, func(grpcServer *grpc.Server) {
-		pb.RegisterHelloWorldServer(grpcServer, &server{})//RegisterGraceServiceServer(grpcServer, NewGracefulServer())
+		pb.RegisterHelloWorldServer(grpcServer, &Server{})//RegisterGraceServiceServer(grpcServer, NewGracefulServer())
 	})
 	defer server.Stop()
 	server.Start()

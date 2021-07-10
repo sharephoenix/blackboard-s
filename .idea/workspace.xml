@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apizero/gozeroapi/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/demo/apizero/gozeroapi/README.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,16 +56,26 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc/internal" />
       <recent name="$PROJECT_DIR$/demo/sqldemosql/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestRpc in blackboards/demo/apizero/gozeroapi/rpc">
+  <component name="RunManager" selected="Go Build.go build blackboards/demo/apizero/gozeroapi/api">
     <configuration name="go build blackboards/demo/apiserver" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="blackboards" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/demo/apiserver/apiserver.go" />
       <package value="blackboards/demo/apiserver" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build blackboards/demo/apizero/gozeroapi/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="blackboards" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/demo/apizero/gozeroapi/api/api.go" />
+      <package value="blackboards/demo/apizero/gozeroapi/api" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -90,15 +97,6 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build blackboards/grpc/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="blackboards" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/grpc/server/main.go" />
-      <package value="blackboards/grpc/server" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestRpc in blackboards/demo/apizero/gozeroapi/rpc" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="blackboards" />
       <working_directory value="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc" />
@@ -112,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build blackboards/demo/apizero/gozeroapi/api" />
         <item itemvalue="Go Test.TestRpc in blackboards/demo/apizero/gozeroapi/rpc" />
         <item itemvalue="Go Build.go build blackboards/demo/sqldemosql" />
         <item itemvalue="Go Build.go build blackboards/demo/apiserver" />
         <item itemvalue="Go Build.go build blackboards/grpc/client" />
-        <item itemvalue="Go Build.go build blackboards/grpc/server" />
       </list>
     </recent_temporary>
   </component>
@@ -143,42 +141,50 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="596" y="366" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1625893294909" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1625899600359">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1625909829462">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1625899600359" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1625899600357">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1625909829462" />
+    <state width="1750" height="392" key="GridCell.Tab.0.bottom/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892854" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1625909829461">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1625899600357" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1625899600356">
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1625909829461" />
+    <state width="1750" height="392" key="GridCell.Tab.0.center/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892850" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1625909829460">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1625899600356" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1625899600358">
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1625909829460" />
+    <state width="1750" height="392" key="GridCell.Tab.0.left/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892849" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1625909829461">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1625899600358" />
-    <state width="1750" height="392" key="GridCell.Tab.1.bottom" timestamp="1625841941907">
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1625909829461" />
+    <state width="1750" height="392" key="GridCell.Tab.0.right/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892853" />
+    <state width="1750" height="392" key="GridCell.Tab.1.bottom" timestamp="1625909808400">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1625841941907" />
-    <state width="1750" height="392" key="GridCell.Tab.1.center" timestamp="1625841941906">
+    <state width="1750" height="392" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1625909808400" />
+    <state width="1750" height="392" key="GridCell.Tab.1.bottom/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196513" />
+    <state width="1750" height="392" key="GridCell.Tab.1.center" timestamp="1625909808399">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1625841941906" />
-    <state width="1750" height="392" key="GridCell.Tab.1.left" timestamp="1625841941906">
+    <state width="1750" height="392" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1625909808399" />
+    <state width="1750" height="392" key="GridCell.Tab.1.center/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196511" />
+    <state width="1750" height="392" key="GridCell.Tab.1.left" timestamp="1625909808398">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1625841941906" />
-    <state width="1750" height="392" key="GridCell.Tab.1.right" timestamp="1625841941907">
+    <state width="1750" height="392" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1625909808398" />
+    <state width="1750" height="392" key="GridCell.Tab.1.left/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196510" />
+    <state width="1750" height="392" key="GridCell.Tab.1.right" timestamp="1625909808400">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="392" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1625841941907" />
-    <state x="597" y="315" width="597" height="490" key="find.popup" timestamp="1625829071358">
+    <state width="1750" height="392" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1625909808400" />
+    <state width="1750" height="392" key="GridCell.Tab.1.right/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196512" />
+    <state x="597" y="315" width="597" height="490" key="find.popup" timestamp="1625909123350">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="597" y="315" width="597" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1625829071358" />
+    <state x="597" y="315" width="597" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1625909123350" />
     <state x="626" y="476" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1625741006809">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -202,12 +208,55 @@
           <line>36</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/demo/apizero/gozeroapi/api/handler/helloworldhandler.go</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../pkg/mod/github.com/tal-tech/go-zero@v1.1.8/rest/httpx/requests.go</url>
+          <line>41</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/demo/apizero/gozeroapi/api/handler/helloworldhandler.go</url>
+          <line>26</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../pkg/mod/github.com/tal-tech/go-zero@v1.1.8/rest/httpx/requests.go</url>
+          <line>46</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../go1.14.4/src/net/http/request.go</url>
+          <line>1280</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../go1.14.4/src/mime/multipart/formdata.go</url>
+          <line>34</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../go1.14.4/src/mime/multipart/formdata.go</url>
+          <line>44</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../go1.14.4/src/mime/multipart/multipart.go</url>
+          <line>319</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
         <watch expression="studentClassRelationRows" language="go" />
         <watch expression="sqlStr" language="go" />
+        <watch expression="r.RequestURI" language="go" />
+        <watch expression="r.ParseForm()" language="go" />
+        <watch expression="r.MultipartForm" language="go" />
       </configuration>
     </watches-manager>
   </component>

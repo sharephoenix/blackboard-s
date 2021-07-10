@@ -11,3 +11,7 @@
 // example
 protoc --go_out=plugins=grpc:. ./HelloWorld.proto
 ```
+
+## 如何启动 apizero 服务
+1. 启动里面的 rpc 服务
+2. 启动 api 服务
