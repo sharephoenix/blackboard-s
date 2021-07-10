@@ -1,8 +1,8 @@
 package main
 
 import (
-	"blackboards/services/buglylog/api/config"
-	"blackboards/services/buglylog/api/handler"
+	"blackboards/demo/apizero/gozeroapi/api/config"
+	"blackboards/demo/apizero/gozeroapi/api/handler"
 	"flag"
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/core/logx"
