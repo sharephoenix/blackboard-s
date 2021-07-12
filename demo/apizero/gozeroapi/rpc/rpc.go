@@ -1,7 +1,7 @@
 package main
 
 import (
-	pb "blackboards/demo/apizero/gozeroapi/rpc/pb"
+	"blackboards/demo/apizero/gozeroapi/rpc/pb"
 	"flag"
 	"fmt"
 	"github.com/tal-tech/go-zero/core/conf"

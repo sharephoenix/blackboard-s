@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/apiserver/apiserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/apiserver/apiserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc/pb/HelloWorld.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc/pb/HelloWorld.proto" beforeDir="false" afterPath="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc/pb/HelloWorld.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc/rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/apizero/gozeroapi/rpc/rpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
