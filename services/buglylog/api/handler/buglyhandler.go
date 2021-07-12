@@ -1,7 +1,9 @@
 package handler
 
 import (
+	"blackboards/base/apibase"
 	buglylogicinfo "blackboards/services/buglylog/api/type"
+	"bufio"
 	"encoding/csv"
 	"fmt"
 	"github.com/tal-tech/go-zero/rest/httpx"
@@ -9,20 +11,16 @@ import (
 	"net/http"
 )
 
-type Requestn struct {
-	File []byte `form:"file"`
-}
-
 // 上传 crash 信息 csv
 func PostCrashInfo(w http.ResponseWriter, r *http.Request) {
-	var req Requestn
-	err := httpx.ParseForm(r, &req)
+	rFile,_, err := r.FormFile("file")
 	if err != nil {
+		fmt.Println(err.Error())
 		return
 	}
 	byts, _ := ioutil.ReadAll(r.Body)
 	fmt.Println(string(byts))
-	reader := csv.NewReader(r.Body)
+	reader := csv.NewReader(bufio.NewReader(rFile))
 	infos := []buglylogicinfo.CrashInfo{}
 	number := 0
 
@@ -57,5 +55,10 @@ func PostCrashInfo(w http.ResponseWriter, r *http.Request) {
 		}
 		number += 1
 	}
-	httpx.OkJson(w, infos)
+	// logic 调用 rpc 服务，写入数据库
+	httpx.OkJson(w, apibase.ApiResponse{
+		0,
+		nil,
+		infos,
+	})
 }
