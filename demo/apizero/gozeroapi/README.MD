@@ -11,7 +11,12 @@
 // example
 protoc --go_out=plugins=grpc:. ./HelloWorld.proto
 ```
-
+注意：
+添加环境变量
+```
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+```
 ## 如何启动 apizero 服务
 1. 启动里面的 rpc 服务
 2. 启动 api 服务
