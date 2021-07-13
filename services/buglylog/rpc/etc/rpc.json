@@ -1,0 +1,15 @@
+{
+  "Name": "rpc.bugly",
+  "ListenOn": "0.0.0.0:3456",
+  "Etcd": {
+    "Hosts": ["127.0.0.1:2379"],
+    "Key": "/bugly/rpc"
+  },
+  "MysqlBugly": {
+    "DataSource": "root:qwer1234@(127.0.0.1:3306)/bugly",
+    "Table":{
+      "CrashInfoTable": "crash_info",
+      "CrashDetailTable": "crash_detail"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package ="/;pb";
+
+message BuglyInfo {
+  string issueId = 1;          	          // 问题 Id
+  string errorType = 2;        	        // 错误类型
+  string appVersion = 3;       	       // 软件版本
+  string appName = 4;          	          // 产品名称
+  string crashTimes = 5;       	       // 异常次数
+  string crashDeviceNum = 6;   	  // 异常设备数量
+  string stackFlag = 7;        	        // 堆栈特征
+  string crashDescription = 8; 	 // crash 描述
+  string lastCrashTime = 9;    	   // 最后一次 crash 时间
+  string status = 10;           	            // 处理状态
+  string processPerson = 11;    	    // 处理人
+}
+
+message BugylDetail {
+  string crashHash = 1;               // crashHash
+  string issueId = 2;                   // issueId
+  string crashId = 3;                   // crashId
+  string userId = 4;                     // 用户ID
+  string deviceId = 5;                 // 设备ID
+  string uploadTime = 6;             // 上报时间
+  string crashTime = 7;               // 发生时间
+  string appBundleId = 8;          // 应用包名
+  string appVersion = 9;             // 应用版本
+  string deviceModel = 10;           // 设备机型
+  string systemVersion = 11;       // 系统版本
+  string romDetail = 12;               // ROM详情
+  string cpuArchitecture = 13;   // CPU架构
+  string isJump = 14;                     // 是否越狱
+  string memorySize = 15;             // 可用内存大小
+  string storeSizse = 16;             // 可用存储空间
+  string sdSizse = 17;                   // 可用SD卡大小
+}
+
+message BuglyInfoRequest {
+  repeated BuglyInfo infos = 1;
+}
+
+message BuglyDetailRequest {
+  repeated BugylDetail infos = 1;
+}
+
+message Response {
+  int32 code = 1;
+}
+
+service BuglyRpcService {
+  rpc UploadBuglyInfo (BuglyInfoRequest) returns (Response);
+  rpc UploadBuglyDetails (BuglyDetailRequest) returns (Response);
+}

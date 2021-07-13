@@ -20,12 +20,12 @@ func main() {
 	config := config2.DemoMysql{
 		"root:qwer1234@(127.0.0.1:3306)/myjob",
 			config2.Table{
-			"myjob",
+			"job",
 			},
 	}
 	dytMysql := sqlx.NewMysql(config.DataSource)
 	var users model.UserModelTable
-	sqlStr := `select ` + studentClassRelationRows +  ` from job`
+	sqlStr := `select ` + studentClassRelationRows +  ` from ` + config.TableName.Myjob
 	err := dytMysql.QueryRow(&users, sqlStr)
 	if err != nil {
 		fmt.Println("error:", err.Error())
