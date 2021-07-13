@@ -3,6 +3,7 @@ package main
 import (
 	"blackboards/services/buglylog/api/config"
 	"blackboards/services/buglylog/api/handler"
+	"blackboards/services/buglylog/api/logic"
 	"flag"
 	"github.com/tal-tech/go-zero/core/logx"
 	"github.com/tal-tech/go-zero/core/service"
@@ -31,18 +32,18 @@ func main() {
 		MaxConns: 500,
 	})
 	defer engine.Stop()
+	crashLogic := logic.CrashLogic{}
+	crashHandler := handler.CrashHandler{crashLogic}
 
-	engine.Use(handler.First)
-	engine.Use(handler.Second)
 	engine.AddRoute(rest.Route{
-		Method:  http.MethodGet,
-		Path:    "/",
-		Handler: handler.Handle,
+		Method:  http.MethodPost,
+		Path:    "/post/crashinfos",
+		Handler: crashHandler.PostCrashInfo,
 	})
 	engine.AddRoute(rest.Route{
 		Method:  http.MethodPost,
-		Path:    "/post/crashinfo",
-		Handler: handler.PostCrashInfo,
+		Path:    "/post/crashdetails",
+		Handler: crashHandler.PostCrashDetail,
 	})
 	engine.Start()
 }
