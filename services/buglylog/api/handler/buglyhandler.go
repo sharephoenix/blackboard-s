@@ -128,10 +128,12 @@ func (handler CrashHandler)PostCrashDetail(w http.ResponseWriter, r *http.Reques
 	}
 	// logic 调用 rpc 服务，写入数据库
 	err = handler.CrashLogic.UploadCrashDetail(infos)
+	fmt.Println("xxxxxxxxxxxxxxxxxxxxxx")
+	fmt.Println(err == nil)
 	if err != nil {
 		httpx.OkJson(w, apibase.ApiResponse{
 			-1,
-			"rpc 出错",
+			"rpc 出错" + err.Error(),
 			infos,
 		})
 		return

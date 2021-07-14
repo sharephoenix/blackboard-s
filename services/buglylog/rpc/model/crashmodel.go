@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/tal-tech/go-zero/core/stores/sqlx"
 	"github.com/tal-tech/go-zero/tools/goctl/model/sql/builderx"
+	"log"
 	"strings"
 )
 
@@ -15,14 +16,20 @@ type CrashModel struct {
 func (model CrashModel)InsertCrashInfos(infos []CrashInfoTable) error {
 	var err error
 	for _, info := range infos {
-		fieldNames          := builderx.FieldNames(&model.CrashInfoTable)
+		fieldNames          := builderx.FieldNames(&CrashInfoTable{})
 		rows                := strings.Join(fieldNames, ",")
-		sql := `insert into ` + model.CrashInfoTable + ` ` + rows + ` value ` + `(?,?,?,?,?,?,?,?,?,?,?)`
-		_, err = model.Exec(sql, info.IssueId, info.ErrorType, info.AppVersion, info.AppName,
+		values := []string{
+			info.IssueId, info.ErrorType, info.AppVersion, info.AppName,
 			info.CrashTimes, info.CrashDeviceNum, info.StackFlag, info.CrashDescription,
-			info.LastCrashTime, info.Status, info.ProcessPerson)
+			info.LastCrashTime, info.Status, info.ProcessPerson,
+		}
+		valueString := strings.Join(values, "\",\"")
+
+		sql := `insert into ` + model.CrashInfoTable + ` (` + rows + `) values ` + `("` + valueString +`")`
+		_, err = model.Exec(sql)
 		if err != nil {
-			break
+			log.Fatalln(sql)
+			return err
 		}
 	}
 	return err
@@ -31,12 +38,24 @@ func (model CrashModel)InsertCrashInfos(infos []CrashInfoTable) error {
 func (model CrashModel)InsertCrashDetails(infos []CrashDetailTable) error {
 	var err error
 	for _, info := range infos {
-		fieldNames          := builderx.FieldNames(&model.CrashInfoTable)
+		fieldNames          := builderx.FieldNames(&CrashDetailTable{})
 		rows                := strings.Join(fieldNames, ",")
-		sql := `insert into ` + model.CrashInfoTable + ` ` + rows + ` value ` + `(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
-		_, err = model.Exec(sql, info.CrashHash,info.IssueId,info.CrashId,info.UserId,info.DeviceId,info.UploadTime,info.CrashTime,info.AppBundleId,info.AppVersion,info.DeviceModel,info.SystemVersion,info.RomDetail,info.CpuArchitecture,info.IsJump,info.MemorySize,info.StoreSizse,info.SdSize)
+
+		values := []string{
+			info.CrashHash,info.IssueId,info.CrashId,
+			info.UserId,info.DeviceId,info.UploadTime,
+			info.CrashTime,info.AppBundleId,info.AppVersion,
+			info.DeviceModel,info.SystemVersion,info.RomDetail,
+			info.CpuArchitecture,info.IsJump,info.MemorySize,
+			info.StoreSizse,info.SdSize,
+		}
+		valueString := strings.Join(values, "\",\"")
+
+		sql := `insert into ` + model.CrashDetailTable + ` (` + rows + `) values ` + `("` + valueString +`")`
+		_, err = model.Exec(sql)
+
 		if err != nil {
-			break
+			return err
 		}
 	}
 	return err

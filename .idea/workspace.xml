@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/services/buglylog/rpc/svc/buglysvc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/etc/buglylog.json" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/etc/buglylog.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../../go1.14.4" />
+  <component name="GOROOT" path="$USER_HOME$/go/go1.15.2" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -150,11 +150,11 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="696" y="494" key="#GOROOT" timestamp="1626228586105">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="696" y="484" key="#GOROOT" timestamp="1626268742860">
+      <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state x="696" y="494" key="#GOROOT/0.0.1792.1120@0.0.1792.1120" timestamp="1626228586105" />
-    <state x="696" y="484" key="#GOROOT/0.25.1792.1041@0.25.1792.1041" timestamp="1626184557542" />
+    <state x="696" y="484" key="#GOROOT/0.25.1792.1041@0.25.1792.1041" timestamp="1626268742860" />
     <state x="691" y="338" key="#Notifications" timestamp="1626104285896">
       <screen x="0" y="25" width="1792" height="1043" />
     </state>

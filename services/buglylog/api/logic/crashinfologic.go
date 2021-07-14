@@ -64,6 +64,6 @@ func (logic CrashLogic)UploadCrashDetail(details []buglylogicinfo.CrashDetail) e
 	request := pb.BuglyDetailRequest{
 		Infos: buglyDetales,
 	}
-	logic.BuglyRpcClient.UploadBuglyDetails(context.TODO(), &request)
-	return nil
+	_, err := logic.BuglyRpcClient.UploadBuglyDetails(context.TODO(), &request)
+	return err
 }

@@ -62,7 +62,7 @@ func newBuglyClient() zrpc.Client {
 		Etcd: discov.EtcdConf{
 			// etcd 服务器
 			Hosts: []string{"0.0.0.0:2379"},
-			Key: "/testdir/testkey",
+			Key: "/bugly/rpc",
 		},
 		App: "iOS",
 	})
