@@ -25,7 +25,9 @@ func (model CrashModel)InsertCrashInfos(infos []CrashInfoTable) error {
 		}
 		valueString := strings.Join(values, "\",\"")
 
-		sql := `insert into ` + model.CrashInfoTable + ` (` + rows + `) values ` + `("` + valueString +`")`
+		sql := `insert into ` + model.CrashInfoTable + ` (` + rows + `) values ` + `("` + valueString +`") `
+		sql += `ON DUPLICATE KEY UPDATE crash_times="` + info.CrashTimes + `"`
+		sql += `, last_crash_time= "` + info.LastCrashTime + `"`
 		_, err = model.Exec(sql)
 		if err != nil {
 			log.Fatalln(sql)
@@ -51,7 +53,8 @@ func (model CrashModel)InsertCrashDetails(infos []CrashDetailTable) error {
 		}
 		valueString := strings.Join(values, "\",\"")
 
-		sql := `insert into ` + model.CrashDetailTable + ` (` + rows + `) values ` + `("` + valueString +`")`
+		sql := `insert into ` + model.CrashDetailTable + ` (` + rows + `) values ` + `("` + valueString +`") `
+		sql += `ON DUPLICATE KEY UPDATE crash_time="` + info.CrashTime + `"`
 		_, err = model.Exec(sql)
 
 		if err != nil {

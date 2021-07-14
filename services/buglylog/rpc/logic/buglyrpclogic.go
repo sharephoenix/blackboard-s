@@ -45,7 +45,7 @@ func (logic BuglyRpcLogic)UploadBuglyDetails(ctx context.Context, infos *pb.Bugl
 		table := model.CrashDetailTable{
 			value.CrashHash,
 			value.IssueId,
-			value.AppVersion,
+			value.CrashId,
 			value.UserId,
 			value.DeviceId,
 			value.UploadTime,

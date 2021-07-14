@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

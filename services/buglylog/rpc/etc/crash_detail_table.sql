@@ -11,16 +11,16 @@
  Target Server Version : 80022
  File Encoding         : 65001
 
- Date: 13/07/2021 23:59:58
+ Date: 14/07/2021 22:15:00
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for bugly_info
+-- Table structure for crash_detail
 -- ----------------------------
-DROP TABLE IF EXISTS `bugly_info`;
+DROP TABLE IF EXISTS `crash_detail`;
 CREATE TABLE `crash_detail` (
   `id_t` int NOT NULL AUTO_INCREMENT,
   `upload_log_num` int DEFAULT NULL,
@@ -41,7 +41,8 @@ CREATE TABLE `crash_detail` (
   `memory_size` varchar(255) DEFAULT NULL,
   `store_sizse` varchar(255) DEFAULT NULL,
   `sd_size` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_t`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id_t`),
+  UNIQUE KEY `crash_id` (`crash_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 SET FOREIGN_KEY_CHECKS = 1;
