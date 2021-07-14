@@ -4,10 +4,13 @@ import (
 	"blackboards/services/buglylog/api/config"
 	"blackboards/services/buglylog/api/handler"
 	"blackboards/services/buglylog/api/logic"
+	pb2 "blackboards/services/buglylog/rpc/pb"
 	"flag"
+	"github.com/tal-tech/go-zero/core/discov"
 	"github.com/tal-tech/go-zero/core/logx"
 	"github.com/tal-tech/go-zero/core/service"
 	"github.com/tal-tech/go-zero/rest"
+	"github.com/tal-tech/go-zero/zrpc"
 	"net/http"
 )
 
@@ -32,8 +35,14 @@ func main() {
 		MaxConns: 500,
 	})
 	defer engine.Stop()
-	crashLogic := logic.CrashLogic{}
-	crashHandler := handler.CrashHandler{crashLogic}
+
+	rpcClient := newBuglyClient()
+	rpcBuglyClien := newBuglyRpcClient(rpcClient)
+	crashLogic := logic.CrashLogic{rpcBuglyClien,}
+
+	crashHandler := handler.CrashHandler{
+		crashLogic,
+	}
 
 	engine.AddRoute(rest.Route{
 		Method:  http.MethodPost,
@@ -46,4 +55,21 @@ func main() {
 		Handler: crashHandler.PostCrashDetail,
 	})
 	engine.Start()
+}
+
+func newBuglyClient() zrpc.Client {
+	conn := zrpc.MustNewClient(zrpc.RpcClientConf{
+		Etcd: discov.EtcdConf{
+			// etcd 服务器
+			Hosts: []string{"0.0.0.0:2379"},
+			Key: "/testdir/testkey",
+		},
+		App: "iOS",
+	})
+	return conn
+}
+
+func newBuglyRpcClient(conn zrpc.Client) pb2.BuglyRpcServiceClient {
+	clientnew := pb2.NewBuglyRpcServiceClient(conn.Conn())
+	return clientnew
 }
