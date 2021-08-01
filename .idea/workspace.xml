@@ -20,30 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchapploghandler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashdetailshandler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashinfoshandler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getAppLoglogic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getCrashDetailslogic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getcrashinfologic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/baseerror/baseerror.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/baseresponse/boolresponse.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/baseresponse/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/httpresponseshard.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/proto/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/proto/response_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/postapploghandler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/postapplogslogic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/etc/crash_log_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/etc/crash_log_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/etc/rpc.json" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/etc/rpc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashlogmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashlogmodel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.proto" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/rpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

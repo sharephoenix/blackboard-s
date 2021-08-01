@@ -54,6 +54,11 @@ func main() {
 		Path:    "/post/crashdetails",
 		Handler: crashHandler.PostCrashDetail,
 	})
+	engine.AddRoute(rest.Route{
+		Method:  http.MethodPost,
+		Path:    "/post/crashapplog",
+		Handler: crashHandler.PostApplogs,
+	})
 
 	// 数据查询
 	engine.AddRoute(rest.Route{
