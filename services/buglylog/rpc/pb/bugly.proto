@@ -38,6 +38,22 @@ message BugylDetail {
   string sdSizse = 17;                   // 可用SD卡大小
 }
 
+message AppLogsRequest {
+  string mobile = 1;
+  string user_id = 2;
+  string log_url = 3;
+  string message = 4;
+  string create_time = 5;
+}
+
+message AppLogsInfo {
+  repeated AppLogsRequest infos = 1;
+}
+
+message GetAppLogsRequest {
+  repeated string mobles = 1;
+}
+
 message BuglyInfoRequest {
   repeated BuglyInfo infos = 1;
 }
@@ -53,4 +69,6 @@ message Response {
 service BuglyRpcService {
   rpc UploadBuglyInfo (BuglyInfoRequest) returns (Response);
   rpc UploadBuglyDetails (BuglyDetailRequest) returns (Response);
+  rpc InsertAppLogInfos (AppLogsRequest) returns (Response);
+  rpc GetAppLogInfos (GetAppLogsRequest) returns (AppLogsInfo);
 }

@@ -326,6 +326,179 @@ func (x *BugylDetail) GetSdSizse() string {
 	return ""
 }
 
+type AppLogsRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Mobile     string `protobuf:"bytes,1,opt,name=mobile,proto3" json:"mobile,omitempty"`
+	UserId     string `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	LogUrl     string `protobuf:"bytes,3,opt,name=log_url,json=logUrl,proto3" json:"log_url,omitempty"`
+	Message    string `protobuf:"bytes,4,opt,name=message,proto3" json:"message,omitempty"`
+	CreateTime string `protobuf:"bytes,5,opt,name=create_time,json=createTime,proto3" json:"create_time,omitempty"`
+}
+
+func (x *AppLogsRequest) Reset() {
+	*x = AppLogsRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_bugly_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AppLogsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AppLogsRequest) ProtoMessage() {}
+
+func (x *AppLogsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_bugly_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AppLogsRequest.ProtoReflect.Descriptor instead.
+func (*AppLogsRequest) Descriptor() ([]byte, []int) {
+	return file_bugly_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *AppLogsRequest) GetMobile() string {
+	if x != nil {
+		return x.Mobile
+	}
+	return ""
+}
+
+func (x *AppLogsRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *AppLogsRequest) GetLogUrl() string {
+	if x != nil {
+		return x.LogUrl
+	}
+	return ""
+}
+
+func (x *AppLogsRequest) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+func (x *AppLogsRequest) GetCreateTime() string {
+	if x != nil {
+		return x.CreateTime
+	}
+	return ""
+}
+
+type AppLogsInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Infos []*AppLogsRequest `protobuf:"bytes,1,rep,name=infos,proto3" json:"infos,omitempty"`
+}
+
+func (x *AppLogsInfo) Reset() {
+	*x = AppLogsInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_bugly_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AppLogsInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AppLogsInfo) ProtoMessage() {}
+
+func (x *AppLogsInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_bugly_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AppLogsInfo.ProtoReflect.Descriptor instead.
+func (*AppLogsInfo) Descriptor() ([]byte, []int) {
+	return file_bugly_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *AppLogsInfo) GetInfos() []*AppLogsRequest {
+	if x != nil {
+		return x.Infos
+	}
+	return nil
+}
+
+type GetAppLogsRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Mobles []string `protobuf:"bytes,1,rep,name=mobles,proto3" json:"mobles,omitempty"`
+}
+
+func (x *GetAppLogsRequest) Reset() {
+	*x = GetAppLogsRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_bugly_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetAppLogsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetAppLogsRequest) ProtoMessage() {}
+
+func (x *GetAppLogsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_bugly_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetAppLogsRequest.ProtoReflect.Descriptor instead.
+func (*GetAppLogsRequest) Descriptor() ([]byte, []int) {
+	return file_bugly_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetAppLogsRequest) GetMobles() []string {
+	if x != nil {
+		return x.Mobles
+	}
+	return nil
+}
+
 type BuglyInfoRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -337,7 +510,7 @@ type BuglyInfoRequest struct {
 func (x *BuglyInfoRequest) Reset() {
 	*x = BuglyInfoRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_bugly_proto_msgTypes[2]
+		mi := &file_bugly_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -350,7 +523,7 @@ func (x *BuglyInfoRequest) String() string {
 func (*BuglyInfoRequest) ProtoMessage() {}
 
 func (x *BuglyInfoRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_bugly_proto_msgTypes[2]
+	mi := &file_bugly_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -363,7 +536,7 @@ func (x *BuglyInfoRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BuglyInfoRequest.ProtoReflect.Descriptor instead.
 func (*BuglyInfoRequest) Descriptor() ([]byte, []int) {
-	return file_bugly_proto_rawDescGZIP(), []int{2}
+	return file_bugly_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *BuglyInfoRequest) GetInfos() []*BuglyInfo {
@@ -384,7 +557,7 @@ type BuglyDetailRequest struct {
 func (x *BuglyDetailRequest) Reset() {
 	*x = BuglyDetailRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_bugly_proto_msgTypes[3]
+		mi := &file_bugly_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -397,7 +570,7 @@ func (x *BuglyDetailRequest) String() string {
 func (*BuglyDetailRequest) ProtoMessage() {}
 
 func (x *BuglyDetailRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_bugly_proto_msgTypes[3]
+	mi := &file_bugly_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -410,7 +583,7 @@ func (x *BuglyDetailRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BuglyDetailRequest.ProtoReflect.Descriptor instead.
 func (*BuglyDetailRequest) Descriptor() ([]byte, []int) {
-	return file_bugly_proto_rawDescGZIP(), []int{3}
+	return file_bugly_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *BuglyDetailRequest) GetInfos() []*BugylDetail {
@@ -431,7 +604,7 @@ type Response struct {
 func (x *Response) Reset() {
 	*x = Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_bugly_proto_msgTypes[4]
+		mi := &file_bugly_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -444,7 +617,7 @@ func (x *Response) String() string {
 func (*Response) ProtoMessage() {}
 
 func (x *Response) ProtoReflect() protoreflect.Message {
-	mi := &file_bugly_proto_msgTypes[4]
+	mi := &file_bugly_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -457,7 +630,7 @@ func (x *Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Response.ProtoReflect.Descriptor instead.
 func (*Response) Descriptor() ([]byte, []int) {
-	return file_bugly_proto_rawDescGZIP(), []int{4}
+	return file_bugly_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *Response) GetCode() int32 {
@@ -528,25 +701,48 @@ var file_bugly_proto_rawDesc = []byte{
 	0x7a, 0x73, 0x65, 0x18, 0x10, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x73, 0x74, 0x6f, 0x72, 0x65,
 	0x53, 0x69, 0x7a, 0x73, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x64, 0x53, 0x69, 0x7a, 0x73, 0x65,
 	0x18, 0x11, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x73, 0x64, 0x53, 0x69, 0x7a, 0x73, 0x65, 0x22,
-	0x37, 0x0a, 0x10, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x23, 0x0a, 0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73, 0x18, 0x01, 0x20, 0x03,
-	0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x70, 0x62, 0x2e, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66,
-	0x6f, 0x52, 0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73, 0x22, 0x3b, 0x0a, 0x12, 0x42, 0x75, 0x67, 0x6c,
-	0x79, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x25,
-	0x0a, 0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e,
-	0x70, 0x62, 0x2e, 0x42, 0x75, 0x67, 0x79, 0x6c, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x05,
-	0x69, 0x6e, 0x66, 0x6f, 0x73, 0x22, 0x1e, 0x0a, 0x08, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52,
-	0x04, 0x63, 0x6f, 0x64, 0x65, 0x32, 0x84, 0x01, 0x0a, 0x0f, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x52,
-	0x70, 0x63, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x35, 0x0a, 0x0f, 0x55, 0x70, 0x6c,
-	0x6f, 0x61, 0x64, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x14, 0x2e, 0x70,
-	0x62, 0x2e, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x0c, 0x2e, 0x70, 0x62, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x3a, 0x0a, 0x12, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x44,
-	0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x12, 0x16, 0x2e, 0x70, 0x62, 0x2e, 0x42, 0x75, 0x67, 0x6c,
-	0x79, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0c,
-	0x2e, 0x70, 0x62, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x06, 0x5a, 0x04,
-	0x2f, 0x3b, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x95, 0x01, 0x0a, 0x0e, 0x41, 0x70, 0x70, 0x4c, 0x6f, 0x67, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x6d, 0x6f, 0x62, 0x69, 0x6c, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x6d, 0x6f, 0x62, 0x69, 0x6c, 0x65, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x73,
+	0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x73, 0x65,
+	0x72, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x6c, 0x6f, 0x67, 0x5f, 0x75, 0x72, 0x6c, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x6c, 0x6f, 0x67, 0x55, 0x72, 0x6c, 0x12, 0x18, 0x0a, 0x07,
+	0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d,
+	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x1f, 0x0a, 0x0b, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65,
+	0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x63, 0x72, 0x65,
+	0x61, 0x74, 0x65, 0x54, 0x69, 0x6d, 0x65, 0x22, 0x37, 0x0a, 0x0b, 0x41, 0x70, 0x70, 0x4c, 0x6f,
+	0x67, 0x73, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x28, 0x0a, 0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73, 0x18,
+	0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x70, 0x62, 0x2e, 0x41, 0x70, 0x70, 0x4c, 0x6f,
+	0x67, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x52, 0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73,
+	0x22, 0x2b, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x41, 0x70, 0x70, 0x4c, 0x6f, 0x67, 0x73, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x6d, 0x6f, 0x62, 0x6c, 0x65, 0x73, 0x18,
+	0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x06, 0x6d, 0x6f, 0x62, 0x6c, 0x65, 0x73, 0x22, 0x37, 0x0a,
+	0x10, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x23, 0x0a, 0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
+	0x32, 0x0d, 0x2e, 0x70, 0x62, 0x2e, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x52,
+	0x05, 0x69, 0x6e, 0x66, 0x6f, 0x73, 0x22, 0x3b, 0x0a, 0x12, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x44,
+	0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x25, 0x0a, 0x05,
+	0x69, 0x6e, 0x66, 0x6f, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x70, 0x62,
+	0x2e, 0x42, 0x75, 0x67, 0x79, 0x6c, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x05, 0x69, 0x6e,
+	0x66, 0x6f, 0x73, 0x22, 0x1e, 0x0a, 0x08, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x63,
+	0x6f, 0x64, 0x65, 0x32, 0xf5, 0x01, 0x0a, 0x0f, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x52, 0x70, 0x63,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x35, 0x0a, 0x0f, 0x55, 0x70, 0x6c, 0x6f, 0x61,
+	0x64, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x14, 0x2e, 0x70, 0x62, 0x2e,
+	0x42, 0x75, 0x67, 0x6c, 0x79, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x1a, 0x0c, 0x2e, 0x70, 0x62, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3a,
+	0x0a, 0x12, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x44, 0x65, 0x74,
+	0x61, 0x69, 0x6c, 0x73, 0x12, 0x16, 0x2e, 0x70, 0x62, 0x2e, 0x42, 0x75, 0x67, 0x6c, 0x79, 0x44,
+	0x65, 0x74, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0c, 0x2e, 0x70,
+	0x62, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x35, 0x0a, 0x11, 0x49, 0x6e,
+	0x73, 0x65, 0x72, 0x74, 0x41, 0x70, 0x70, 0x4c, 0x6f, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x73, 0x12,
+	0x12, 0x2e, 0x70, 0x62, 0x2e, 0x41, 0x70, 0x70, 0x4c, 0x6f, 0x67, 0x73, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x0c, 0x2e, 0x70, 0x62, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x38, 0x0a, 0x0e, 0x47, 0x65, 0x74, 0x41, 0x70, 0x70, 0x4c, 0x6f, 0x67, 0x49, 0x6e,
+	0x66, 0x6f, 0x73, 0x12, 0x15, 0x2e, 0x70, 0x62, 0x2e, 0x47, 0x65, 0x74, 0x41, 0x70, 0x70, 0x4c,
+	0x6f, 0x67, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0f, 0x2e, 0x70, 0x62, 0x2e,
+	0x41, 0x70, 0x70, 0x4c, 0x6f, 0x67, 0x73, 0x49, 0x6e, 0x66, 0x6f, 0x42, 0x06, 0x5a, 0x04, 0x2f,
+	0x3b, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -561,26 +757,34 @@ func file_bugly_proto_rawDescGZIP() []byte {
 	return file_bugly_proto_rawDescData
 }
 
-var file_bugly_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_bugly_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_bugly_proto_goTypes = []interface{}{
 	(*BuglyInfo)(nil),          // 0: pb.BuglyInfo
 	(*BugylDetail)(nil),        // 1: pb.BugylDetail
-	(*BuglyInfoRequest)(nil),   // 2: pb.BuglyInfoRequest
-	(*BuglyDetailRequest)(nil), // 3: pb.BuglyDetailRequest
-	(*Response)(nil),           // 4: pb.Response
+	(*AppLogsRequest)(nil),     // 2: pb.AppLogsRequest
+	(*AppLogsInfo)(nil),        // 3: pb.AppLogsInfo
+	(*GetAppLogsRequest)(nil),  // 4: pb.GetAppLogsRequest
+	(*BuglyInfoRequest)(nil),   // 5: pb.BuglyInfoRequest
+	(*BuglyDetailRequest)(nil), // 6: pb.BuglyDetailRequest
+	(*Response)(nil),           // 7: pb.Response
 }
 var file_bugly_proto_depIdxs = []int32{
-	0, // 0: pb.BuglyInfoRequest.infos:type_name -> pb.BuglyInfo
-	1, // 1: pb.BuglyDetailRequest.infos:type_name -> pb.BugylDetail
-	2, // 2: pb.BuglyRpcService.UploadBuglyInfo:input_type -> pb.BuglyInfoRequest
-	3, // 3: pb.BuglyRpcService.UploadBuglyDetails:input_type -> pb.BuglyDetailRequest
-	4, // 4: pb.BuglyRpcService.UploadBuglyInfo:output_type -> pb.Response
-	4, // 5: pb.BuglyRpcService.UploadBuglyDetails:output_type -> pb.Response
-	4, // [4:6] is the sub-list for method output_type
-	2, // [2:4] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	2, // 0: pb.AppLogsInfo.infos:type_name -> pb.AppLogsRequest
+	0, // 1: pb.BuglyInfoRequest.infos:type_name -> pb.BuglyInfo
+	1, // 2: pb.BuglyDetailRequest.infos:type_name -> pb.BugylDetail
+	5, // 3: pb.BuglyRpcService.UploadBuglyInfo:input_type -> pb.BuglyInfoRequest
+	6, // 4: pb.BuglyRpcService.UploadBuglyDetails:input_type -> pb.BuglyDetailRequest
+	2, // 5: pb.BuglyRpcService.InsertAppLogInfos:input_type -> pb.AppLogsRequest
+	4, // 6: pb.BuglyRpcService.GetAppLogInfos:input_type -> pb.GetAppLogsRequest
+	7, // 7: pb.BuglyRpcService.UploadBuglyInfo:output_type -> pb.Response
+	7, // 8: pb.BuglyRpcService.UploadBuglyDetails:output_type -> pb.Response
+	7, // 9: pb.BuglyRpcService.InsertAppLogInfos:output_type -> pb.Response
+	3, // 10: pb.BuglyRpcService.GetAppLogInfos:output_type -> pb.AppLogsInfo
+	7, // [7:11] is the sub-list for method output_type
+	3, // [3:7] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_bugly_proto_init() }
@@ -614,7 +818,7 @@ func file_bugly_proto_init() {
 			}
 		}
 		file_bugly_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BuglyInfoRequest); i {
+			switch v := v.(*AppLogsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -626,7 +830,7 @@ func file_bugly_proto_init() {
 			}
 		}
 		file_bugly_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*BuglyDetailRequest); i {
+			switch v := v.(*AppLogsInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -638,6 +842,42 @@ func file_bugly_proto_init() {
 			}
 		}
 		file_bugly_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetAppLogsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_bugly_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*BuglyInfoRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_bugly_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*BuglyDetailRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_bugly_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Response); i {
 			case 0:
 				return &v.state
@@ -656,7 +896,7 @@ func file_bugly_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_bugly_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -684,6 +924,8 @@ const _ = grpc.SupportPackageIsVersion6
 type BuglyRpcServiceClient interface {
 	UploadBuglyInfo(ctx context.Context, in *BuglyInfoRequest, opts ...grpc.CallOption) (*Response, error)
 	UploadBuglyDetails(ctx context.Context, in *BuglyDetailRequest, opts ...grpc.CallOption) (*Response, error)
+	InsertAppLogInfos(ctx context.Context, in *AppLogsRequest, opts ...grpc.CallOption) (*Response, error)
+	GetAppLogInfos(ctx context.Context, in *GetAppLogsRequest, opts ...grpc.CallOption) (*AppLogsInfo, error)
 }
 
 type buglyRpcServiceClient struct {
@@ -712,10 +954,30 @@ func (c *buglyRpcServiceClient) UploadBuglyDetails(ctx context.Context, in *Bugl
 	return out, nil
 }
 
+func (c *buglyRpcServiceClient) InsertAppLogInfos(ctx context.Context, in *AppLogsRequest, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/pb.BuglyRpcService/InsertAppLogInfos", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *buglyRpcServiceClient) GetAppLogInfos(ctx context.Context, in *GetAppLogsRequest, opts ...grpc.CallOption) (*AppLogsInfo, error) {
+	out := new(AppLogsInfo)
+	err := c.cc.Invoke(ctx, "/pb.BuglyRpcService/GetAppLogInfos", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // BuglyRpcServiceServer is the server API for BuglyRpcService service.
 type BuglyRpcServiceServer interface {
 	UploadBuglyInfo(context.Context, *BuglyInfoRequest) (*Response, error)
 	UploadBuglyDetails(context.Context, *BuglyDetailRequest) (*Response, error)
+	InsertAppLogInfos(context.Context, *AppLogsRequest) (*Response, error)
+	GetAppLogInfos(context.Context, *GetAppLogsRequest) (*AppLogsInfo, error)
 }
 
 // UnimplementedBuglyRpcServiceServer can be embedded to have forward compatible implementations.
@@ -727,6 +989,12 @@ func (*UnimplementedBuglyRpcServiceServer) UploadBuglyInfo(context.Context, *Bug
 }
 func (*UnimplementedBuglyRpcServiceServer) UploadBuglyDetails(context.Context, *BuglyDetailRequest) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UploadBuglyDetails not implemented")
+}
+func (*UnimplementedBuglyRpcServiceServer) InsertAppLogInfos(context.Context, *AppLogsRequest) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method InsertAppLogInfos not implemented")
+}
+func (*UnimplementedBuglyRpcServiceServer) GetAppLogInfos(context.Context, *GetAppLogsRequest) (*AppLogsInfo, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAppLogInfos not implemented")
 }
 
 func RegisterBuglyRpcServiceServer(s *grpc.Server, srv BuglyRpcServiceServer) {
@@ -769,6 +1037,42 @@ func _BuglyRpcService_UploadBuglyDetails_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _BuglyRpcService_InsertAppLogInfos_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AppLogsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BuglyRpcServiceServer).InsertAppLogInfos(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pb.BuglyRpcService/InsertAppLogInfos",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BuglyRpcServiceServer).InsertAppLogInfos(ctx, req.(*AppLogsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _BuglyRpcService_GetAppLogInfos_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAppLogsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(BuglyRpcServiceServer).GetAppLogInfos(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/pb.BuglyRpcService/GetAppLogInfos",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(BuglyRpcServiceServer).GetAppLogInfos(ctx, req.(*GetAppLogsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _BuglyRpcService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "pb.BuglyRpcService",
 	HandlerType: (*BuglyRpcServiceServer)(nil),
@@ -780,6 +1084,14 @@ var _BuglyRpcService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UploadBuglyDetails",
 			Handler:    _BuglyRpcService_UploadBuglyDetails_Handler,
+		},
+		{
+			MethodName: "InsertAppLogInfos",
+			Handler:    _BuglyRpcService_InsertAppLogInfos_Handler,
+		},
+		{
+			MethodName: "GetAppLogInfos",
+			Handler:    _BuglyRpcService_GetAppLogInfos_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
