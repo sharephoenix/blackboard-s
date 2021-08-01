@@ -39,11 +39,12 @@ message BugylDetail {
 }
 
 message AppLogsRequest {
-  string mobile = 1;
-  string user_id = 2;
-  string log_url = 3;
-  string message = 4;
-  string create_time = 5;
+  string id = 1;
+  string mobile = 2;
+  string user_id = 3;
+  string log_url = 4;
+  string message = 5;
+  string create_time = 6;
 }
 
 message AppLogsInfo {
@@ -62,13 +63,31 @@ message BuglyDetailRequest {
   repeated BugylDetail infos = 1;
 }
 
+message BuglyDetailResponse {
+  repeated BugylDetail detals = 1;
+}
+
+message BuglyInfoResponse {
+  repeated BuglyInfo infos = 1;
+}
+
 message Response {
   int32 code = 1;
 }
 
+message BuglyInfoIssueRequest {
+  repeated string versions = 1;
+}
+
+message BuglyDetailIssueRequest {
+  repeated string mobiles = 1;
+}
+
 service BuglyRpcService {
   rpc UploadBuglyInfo (BuglyInfoRequest) returns (Response);
+  rpc GetBuglyInfo(BuglyInfoIssueRequest) returns (BuglyInfoResponse);
   rpc UploadBuglyDetails (BuglyDetailRequest) returns (Response);
+  rpc GetBuglyDetails (BuglyDetailIssueRequest) returns (BuglyDetailResponse);
   rpc InsertAppLogInfos (AppLogsRequest) returns (Response);
   rpc GetAppLogInfos (GetAppLogsRequest) returns (AppLogsInfo);
 }

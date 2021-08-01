@@ -9,7 +9,8 @@
     "DataSource": "root:qwer1234@(127.0.0.1:3306)/bugly",
     "Table":{
       "CrashInfoTable": "crash_info",
-      "CrashDetailTable": "crash_detail"
+      "CrashDetailTable": "crash_detail",
+      "CrashLogTable": "app_log"
     }
   }
 }

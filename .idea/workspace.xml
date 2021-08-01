@@ -20,9 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchapploghandler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashdetailshandler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashinfoshandler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getAppLoglogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getCrashDetailslogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getcrashinfologic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/baseerror/baseerror.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/baseresponse/boolresponse.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/baseresponse/response.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/httpresponseshard.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/proto/response.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/proto/response_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/logic/crashinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/etc/crash_log_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/etc/crash_log_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/etc/rpc.json" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/etc/rpc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashlogmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashlogmodel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.proto" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/pb/bugly.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/rpc.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +65,15 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1v1pEiEaBwgiszawfE2V3ZwxZH1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -144,6 +168,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -157,6 +184,10 @@
       <screen x="0" y="25" width="1792" height="1043" />
     </state>
     <state x="691" y="338" key="#Notifications/0.25.1792.1043@0.25.1792.1043" timestamp="1626104285896" />
+    <state x="561" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1627793612757">
+      <screen x="0" y="25" width="1792" height="1041" />
+    </state>
+    <state x="561" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1041@0.25.1792.1041" timestamp="1627793612757" />
     <state x="596" y="366" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625893294909">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -173,67 +204,67 @@
     <state width="474" height="466" key="DebuggerActiveHint/0.0.1792.1120@0.0.1792.1120" timestamp="1626009894268" />
     <state width="670" height="435" key="DebuggerActiveHint/0.25.1792.1043@0.25.1792.1043" timestamp="1626101535740" />
     <state width="483" height="435" key="DebuggerActiveHint/0.25.1792.1044@0.25.1792.1044" timestamp="1626098757626" />
-    <state width="1400" height="103" key="GridCell.Tab.0.bottom" timestamp="1626190499296">
+    <state width="1400" height="309" key="GridCell.Tab.0.bottom" timestamp="1626703494429">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607290" />
-    <state width="1400" height="103" key="GridCell.Tab.0.bottom/0.25.1792.1041@0.25.1792.1041" timestamp="1626190499296" />
+    <state width="1400" height="309" key="GridCell.Tab.0.bottom/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494429" />
     <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192848" />
     <state width="1750" height="339" key="GridCell.Tab.0.bottom/0.25.1792.1044@0.25.1792.1044" timestamp="1626098740491" />
     <state width="1750" height="392" key="GridCell.Tab.0.bottom/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892854" />
-    <state width="1400" height="103" key="GridCell.Tab.0.center" timestamp="1626190499295">
+    <state width="1400" height="309" key="GridCell.Tab.0.center" timestamp="1626703494428">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607290" />
-    <state width="1400" height="103" key="GridCell.Tab.0.center/0.25.1792.1041@0.25.1792.1041" timestamp="1626190499295" />
+    <state width="1400" height="309" key="GridCell.Tab.0.center/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494428" />
     <state width="1750" height="318" key="GridCell.Tab.0.center/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192847" />
     <state width="1750" height="339" key="GridCell.Tab.0.center/0.25.1792.1044@0.25.1792.1044" timestamp="1626098740488" />
     <state width="1750" height="392" key="GridCell.Tab.0.center/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892850" />
-    <state width="1400" height="103" key="GridCell.Tab.0.left" timestamp="1626190499295">
+    <state width="1400" height="309" key="GridCell.Tab.0.left" timestamp="1626703494427">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607289" />
-    <state width="1400" height="103" key="GridCell.Tab.0.left/0.25.1792.1041@0.25.1792.1041" timestamp="1626190499295" />
+    <state width="1400" height="309" key="GridCell.Tab.0.left/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494427" />
     <state width="1750" height="318" key="GridCell.Tab.0.left/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192847" />
     <state width="1750" height="339" key="GridCell.Tab.0.left/0.25.1792.1044@0.25.1792.1044" timestamp="1626098740487" />
     <state width="1750" height="392" key="GridCell.Tab.0.left/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892849" />
-    <state width="1400" height="103" key="GridCell.Tab.0.right" timestamp="1626190499296">
+    <state width="1400" height="309" key="GridCell.Tab.0.right" timestamp="1626703494428">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607290" />
-    <state width="1400" height="103" key="GridCell.Tab.0.right/0.25.1792.1041@0.25.1792.1041" timestamp="1626190499296" />
+    <state width="1400" height="309" key="GridCell.Tab.0.right/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494428" />
     <state width="1750" height="318" key="GridCell.Tab.0.right/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192847" />
     <state width="1750" height="339" key="GridCell.Tab.0.right/0.25.1792.1044@0.25.1792.1044" timestamp="1626098740489" />
     <state width="1750" height="392" key="GridCell.Tab.0.right/0.25.1792.1047@0.25.1792.1047" timestamp="1625906892853" />
-    <state width="1400" height="309" key="GridCell.Tab.1.bottom" timestamp="1626185985044">
+    <state width="1400" height="309" key="GridCell.Tab.1.bottom" timestamp="1626703494430">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607178" />
-    <state width="1400" height="309" key="GridCell.Tab.1.bottom/0.25.1792.1041@0.25.1792.1041" timestamp="1626185985044" />
+    <state width="1400" height="309" key="GridCell.Tab.1.bottom/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494430" />
     <state width="1400" height="309" key="GridCell.Tab.1.bottom/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192845" />
     <state width="1750" height="339" key="GridCell.Tab.1.bottom/0.25.1792.1044@0.25.1792.1044" timestamp="1626098741704" />
     <state width="1750" height="392" key="GridCell.Tab.1.bottom/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196513" />
-    <state width="1400" height="309" key="GridCell.Tab.1.center" timestamp="1626185985044">
+    <state width="1400" height="309" key="GridCell.Tab.1.center" timestamp="1626703494430">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607177" />
-    <state width="1400" height="309" key="GridCell.Tab.1.center/0.25.1792.1041@0.25.1792.1041" timestamp="1626185985044" />
+    <state width="1400" height="309" key="GridCell.Tab.1.center/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494430" />
     <state width="1400" height="309" key="GridCell.Tab.1.center/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192844" />
     <state width="1750" height="339" key="GridCell.Tab.1.center/0.25.1792.1044@0.25.1792.1044" timestamp="1626098741704" />
     <state width="1750" height="392" key="GridCell.Tab.1.center/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196511" />
-    <state width="1400" height="309" key="GridCell.Tab.1.left" timestamp="1626185985043">
+    <state width="1400" height="309" key="GridCell.Tab.1.left" timestamp="1626703494429">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607177" />
-    <state width="1400" height="309" key="GridCell.Tab.1.left/0.25.1792.1041@0.25.1792.1041" timestamp="1626185985043" />
+    <state width="1400" height="309" key="GridCell.Tab.1.left/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494429" />
     <state width="1400" height="309" key="GridCell.Tab.1.left/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192844" />
     <state width="1750" height="339" key="GridCell.Tab.1.left/0.25.1792.1044@0.25.1792.1044" timestamp="1626098741703" />
     <state width="1750" height="392" key="GridCell.Tab.1.left/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196510" />
-    <state width="1400" height="309" key="GridCell.Tab.1.right" timestamp="1626185985044">
+    <state width="1400" height="309" key="GridCell.Tab.1.right" timestamp="1626703494430">
       <screen x="0" y="25" width="1792" height="1041" />
     </state>
     <state width="1750" height="250" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1626013607178" />
-    <state width="1400" height="309" key="GridCell.Tab.1.right/0.25.1792.1041@0.25.1792.1041" timestamp="1626185985044" />
+    <state width="1400" height="309" key="GridCell.Tab.1.right/0.25.1792.1041@0.25.1792.1041" timestamp="1626703494430" />
     <state width="1400" height="309" key="GridCell.Tab.1.right/0.25.1792.1043@0.25.1792.1043" timestamp="1626104192844" />
     <state width="1750" height="339" key="GridCell.Tab.1.right/0.25.1792.1044@0.25.1792.1044" timestamp="1626098741704" />
     <state width="1750" height="392" key="GridCell.Tab.1.right/0.25.1792.1047@0.25.1792.1047" timestamp="1625908196512" />
@@ -248,6 +279,10 @@
     <state x="597" y="315" width="597" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1625909123350" />
     <state x="597" y="318" width="597" height="490" key="find.popup/0.25.1792.1041@0.25.1792.1041" timestamp="1626191484131" />
     <state x="597" y="319" width="597" height="490" key="find.popup/0.25.1792.1045@0.25.1792.1045" timestamp="1626096527037" />
+    <state x="626" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1626703348361">
+      <screen x="0" y="25" width="1792" height="1041" />
+    </state>
+    <state x="626" y="231" width="670" height="676" key="search.everywhere.popup/0.25.1792.1041@0.25.1792.1041" timestamp="1626703348361" />
     <state x="626" y="476" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1625741006809">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

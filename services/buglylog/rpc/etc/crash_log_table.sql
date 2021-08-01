@@ -22,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `app_log`;
 CREATE TABLE `app_log` (
-  `id` int NOT NULL AUTO_INCREMENT COMMENT '数据唯一 id',
+  `id` int NOT NULL COMMENT '数据唯一 id',
   `mobile` varchar(255) DEFAULT NULL COMMENT '日志 id',
   `user_id` varchar(255) DEFAULT NULL,
   `log_url` varchar(255) DEFAULT NULL,

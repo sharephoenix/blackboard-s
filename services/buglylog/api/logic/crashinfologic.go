@@ -67,3 +67,21 @@ func (logic CrashLogic)UploadCrashDetail(details []buglylogicinfo.CrashDetail) e
 	_, err := logic.BuglyRpcClient.UploadBuglyDetails(context.TODO(), &request)
 	return err
 }
+
+
+//engine.AddRoute(rest.Route{
+//Method:  http.MethodGet,
+//Path:    "/get/crashinfos",
+//Handler: crashHandler.GetCrashInfos,
+//})
+//engine.AddRoute(rest.Route{
+//Method:  http.MethodGet,
+//Path:    "/get/crashdetails",
+//Handler: crashHandler.GetCrashDetail,
+//})
+//engine.AddRoute(rest.Route{
+//Method:  http.MethodGet,
+//Path:    "/get/crashapplogs",
+//Handler: crashHandler.GetCrashApplogs,
+//})
+//engine.Start()

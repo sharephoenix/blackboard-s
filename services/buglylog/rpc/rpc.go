@@ -37,6 +37,7 @@ func main() {
 		dytMysql,
 		c.MysqlBugly.Table.CrashInfoTable,
 		c.MysqlBugly.Table.CrashDetailTable,
+		c.MysqlBugly.Table.CrashLogTable,
 	}
 
 	logicServer := logic2.BuglyRpcLogic{

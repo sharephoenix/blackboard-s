@@ -43,7 +43,7 @@ func main() {
 	crashHandler := handler.CrashHandler{
 		crashLogic,
 	}
-
+	// 数据插入
 	engine.AddRoute(rest.Route{
 		Method:  http.MethodPost,
 		Path:    "/post/crashinfos",
@@ -53,6 +53,23 @@ func main() {
 		Method:  http.MethodPost,
 		Path:    "/post/crashdetails",
 		Handler: crashHandler.PostCrashDetail,
+	})
+
+	// 数据查询
+	engine.AddRoute(rest.Route{
+		Method:  http.MethodGet,
+		Path:    "/get/crashinfos",
+		Handler: crashHandler.GetCrashInfos,
+	})
+	engine.AddRoute(rest.Route{
+		Method:  http.MethodGet,
+		Path:    "/get/crashdetails",
+		Handler: crashHandler.GetCrashDetail,
+	})
+	engine.AddRoute(rest.Route{
+		Method:  http.MethodGet,
+		Path:    "/get/crashapplogs",
+		Handler: crashHandler.GetCrashApplogs,
 	})
 	engine.Start()
 }

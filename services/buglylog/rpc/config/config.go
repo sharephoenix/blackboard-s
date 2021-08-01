@@ -6,6 +6,7 @@ type BuglyRpcConfig struct {
 		Table struct{
 			CrashInfoTable string
 			CrashDetailTable string
+			CrashLogTable string
 		}
 	}
 }

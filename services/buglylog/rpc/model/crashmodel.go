@@ -11,6 +11,7 @@ type CrashModel struct {
 	sqlx.SqlConn
 	CrashInfoTable string
 	CrashDetailTable string
+	CrashLogTable string
 }
 
 func (model CrashModel)InsertCrashInfos(infos []CrashInfoTable) error {
@@ -62,6 +63,44 @@ func (model CrashModel)InsertCrashDetails(infos []CrashDetailTable) error {
 		}
 	}
 	return err
+}
+
+func (model CrashModel)GetCrashInfos(versions []string) ([]CrashInfoTable, error) {
+	var infos []CrashInfoTable
+	if len(infos) < 1 {
+		return nil, CustomError{
+			"count <= 0",
+		}
+	}
+	sqlString := `select * from ` + model.CrashInfoTable + ` where version=` + `"` + versions[0]
+	for _, version := range versions[1:] {
+		sqlString += `, or version=` + version
+	}
+	err := model.QueryRows(&infos, sqlString)
+	if err != nil {
+		return nil, err
+	}
+	model.QueryRows(&infos, "select * from ")
+	return infos, nil
+}
+
+func (model CrashModel)GetCrashDetailInfos(mobiles []string) ([]CrashDetailTable, error) {
+	var infos []CrashDetailTable
+	if len(infos) < 1 {
+		return nil, CustomError{
+			"count <= 0",
+		}
+	}
+	sqlString := `select * from ` + model.CrashDetailTable + ` where UserId=` + `"` + mobiles[0]
+	for _, version := range mobiles[1:] {
+		sqlString += `, or version=` + version
+	}
+	err := model.QueryRows(&infos, sqlString)
+	if err != nil {
+		return nil, err
+	}
+	model.QueryRows(&infos, "select * from ")
+	return infos, nil
 }
 
 type CrashInfoTable struct {
