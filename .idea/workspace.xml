@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/handler/postapploghandler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/buglylog/api/logic/postapplogslogic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/buglyhandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/fetchapploghandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchapploghandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashdetailshandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashdetailshandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashinfoshandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/fetchcrashinfoshandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/handler/postapploghandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/handler/postapploghandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/logic/getcrashinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/logic/getcrashinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/logic/postapplogslogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/logic/postapplogslogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/api/type/buglylogicinfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/type/buglylogicinfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashmodel.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$USER_HOME$/go/go1.15.2" />
+  <component name="GOROOT" path="$PROJECT_DIR$/../../go1.14.4" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -156,10 +160,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="696" y="484" key="#GOROOT" timestamp="1626268742860">
-      <screen x="0" y="25" width="1792" height="1041" />
+    <state x="696" y="494" key="#GOROOT" timestamp="1627881664823">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="696" y="494" key="#GOROOT/0.0.1792.1120@0.0.1792.1120" timestamp="1626228586105" />
+    <state x="696" y="494" key="#GOROOT/0.0.1792.1120@0.0.1792.1120" timestamp="1627881664823" />
     <state x="696" y="484" key="#GOROOT/0.25.1792.1041@0.25.1792.1041" timestamp="1626268742860" />
     <state x="691" y="338" key="#Notifications" timestamp="1626104285896">
       <screen x="0" y="25" width="1792" height="1043" />
@@ -254,15 +258,16 @@
     </state>
     <state width="896" height="560" key="XDebugger.FullValuePopup/0.0.1792.1120@0.0.1792.1120" timestamp="1626009287019" />
     <state width="896" height="522" key="XDebugger.FullValuePopup/0.25.1792.1043@0.25.1792.1043" timestamp="1626101940834" />
-    <state x="597" y="318" width="597" height="490" key="find.popup" timestamp="1626191484131">
-      <screen x="0" y="25" width="1792" height="1041" />
+    <state x="597" y="315" width="597" height="490" key="find.popup" timestamp="1627882039035">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="597" y="315" width="597" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1625909123350" />
+    <state x="597" y="315" width="597" height="490" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1627882039035" />
     <state x="597" y="318" width="597" height="490" key="find.popup/0.25.1792.1041@0.25.1792.1041" timestamp="1626191484131" />
     <state x="597" y="319" width="597" height="490" key="find.popup/0.25.1792.1045@0.25.1792.1045" timestamp="1626096527037" />
-    <state x="626" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1626703348361">
-      <screen x="0" y="25" width="1792" height="1041" />
+    <state x="626" y="222" width="670" height="728" key="search.everywhere.popup" timestamp="1627882030672">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="626" y="222" width="670" height="728" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1627882030672" />
     <state x="626" y="231" width="670" height="676" key="search.everywhere.popup/0.25.1792.1041@0.25.1792.1041" timestamp="1626703348361" />
     <state x="626" y="476" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1625741006809">
       <screen x="0" y="0" width="1792" height="1120" />

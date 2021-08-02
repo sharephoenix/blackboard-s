@@ -1,7 +1,7 @@
 package logic
 
 import (
-	"blackboards/services/buglylog/api/handler"
+	buglylogicinfo "blackboards/services/buglylog/api/type"
 	"blackboards/services/buglylog/rpc/pb"
 	"context"
 )
@@ -12,7 +12,7 @@ type PostCrashInfoLogicResponse struct {
 }
 
 // post
-func (logic CrashLogic)PostCrashInfos(request handler.AppLogPostInfoRequest) (PostCrashInfoLogicResponse, error) {
+func (logic CrashLogic)PostCrashInfos(request buglylogicinfo.AppLogPostInfoRequest) (PostCrashInfoLogicResponse, error) {
 	var success []string
 	var fails []string
 	for _, item := range request.Infos {

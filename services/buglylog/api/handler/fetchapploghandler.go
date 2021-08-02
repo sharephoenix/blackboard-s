@@ -27,7 +27,7 @@ type ApplogsContext struct {
 // 获取崩溃详情?mobiles=110,112,113
 func (handler CrashHandler)GetCrashApplogs(w http.ResponseWriter, r *http.Request) {
 	var request ApplogsRequest
-	err := httpx.Parse(r, request)
+	err := httpx.Parse(r, &request)
 	if err != nil {
 		baseresponse.FormatResponseWithRequest(nil, err, w, r)
 		return

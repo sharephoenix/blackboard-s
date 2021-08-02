@@ -1,6 +1,7 @@
 package model
 
 import (
+	"fmt"
 	"github.com/tal-tech/go-zero/core/stores/sqlx"
 	"github.com/tal-tech/go-zero/tools/goctl/model/sql/builderx"
 	"log"
@@ -66,16 +67,18 @@ func (model CrashModel)InsertCrashDetails(infos []CrashDetailTable) error {
 }
 
 func (model CrashModel)GetCrashInfos(versions []string) ([]CrashInfoTable, error) {
+	fmt.Println("begin-GetCrashInfos:", versions)
 	var infos []CrashInfoTable
-	if len(infos) < 1 {
+	if len(versions) < 1 {
 		return nil, CustomError{
 			"count <= 0",
 		}
 	}
-	sqlString := `select * from ` + model.CrashInfoTable + ` where version=` + `"` + versions[0]
+	sqlString := `select * from ` + model.CrashInfoTable + ` where app_version=` + `'` + versions[0] + `'`
 	for _, version := range versions[1:] {
-		sqlString += `, or version=` + version
+		sqlString += ` or app_version='` + version + `'`
 	}
+	fmt.Println("GetCrashInfos-sql:", sqlString)
 	err := model.QueryRows(&infos, sqlString)
 	if err != nil {
 		return nil, err
@@ -86,15 +89,16 @@ func (model CrashModel)GetCrashInfos(versions []string) ([]CrashInfoTable, error
 
 func (model CrashModel)GetCrashDetailInfos(mobiles []string) ([]CrashDetailTable, error) {
 	var infos []CrashDetailTable
-	if len(infos) < 1 {
+	if len(mobiles) < 1 {
 		return nil, CustomError{
 			"count <= 0",
 		}
 	}
-	sqlString := `select * from ` + model.CrashDetailTable + ` where UserId=` + `"` + mobiles[0]
+	sqlString := `select * from ` + model.CrashDetailTable + ` where user_id=` + `'` + mobiles[0] + `'`
 	for _, version := range mobiles[1:] {
-		sqlString += `, or version=` + version
+		sqlString += ` or user_id='` + version + `'`
 	}
+	fmt.Println("GetCrashDetailInfos-sql:", sqlString)
 	err := model.QueryRows(&infos, sqlString)
 	if err != nil {
 		return nil, err

@@ -2,6 +2,7 @@ package handler
 
 import (
 	"blackboards/shared/baseresponse"
+	"fmt"
 	"github.com/tal-tech/go-zero/rest/httpx"
 	"net/http"
 	"strings"
@@ -32,11 +33,13 @@ type CrashInfo struct {
 // 获取崩溃信息?viersions=1.1.1,1.2.3
 func (handler CrashHandler)GetCrashInfos(w http.ResponseWriter, r *http.Request) {
 	var request CrashInfoRequest
-	err := httpx.Parse(r, request)
+	err := httpx.Parse(r, &request)
 	if err != nil {
+		fmt.Println("request error!!")
 		baseresponse.FormatResponseWithRequest(nil, err, w, r)
 		return
 	}
+	fmt.Println("this is request" + request.Versions)
 	versions := strings.Split(request.Versions, ",")
 	crashInfos, err := handler.CrashLogic.FetchCrashInfos(versions)
 	var reskposne []CrashInfo
