@@ -4,6 +4,7 @@ import (
 	"blackboards/services/buglylog/rpc/model"
 	"blackboards/services/buglylog/rpc/pb"
 	"context"
+	"time"
 )
 
 type BuglyRpcLogic struct {
@@ -77,8 +78,8 @@ func (logic BuglyRpcLogic)InsertAppLogInfos(ctx context.Context, request *pb.App
 		request.UserId,
 		request.LogUrl,
 		request.CreateTime,
-		nil,
-		nil,
+		time.Now().UTC().String(),
+		time.Now().UTC().String(),
 	}
 	err := logic.Model.InsertCrashLog(table)
 	if err != nil {
@@ -95,10 +96,12 @@ func (logic BuglyRpcLogic)GetAppLogInfos(ctx context.Context, request *pb.GetApp
 	responseInfos := []*pb.AppLogsRequest{}
 	for _, log := range infos {
 		info := pb.AppLogsRequest{
+			Id: log.Id,
 			Mobile: log.Mobile,
 			UserId: log.User_id,
 			LogUrl: log.Log_url,
 			Message: log.Message,
+			CreateTime: log.Log_create_time,
 		}
 		responseInfos = append(responseInfos, &info)
 	}

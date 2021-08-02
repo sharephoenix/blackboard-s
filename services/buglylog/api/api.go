@@ -21,7 +21,7 @@ func main() {
 	var c config.BuglyLogConfig
 	//conf.MustLoad(*configFile, &c)
 	c = config.BuglyLogConfig{
-		Port: 9090,
+		Port:    9090,
 		Timeout: 100,
 	}
 	engine := rest.MustNewServer(rest.RestConf{

@@ -44,8 +44,8 @@ type CrashLogModelTable struct {
 	Log_url         string `db:"log_url"`         // logUrl
 	Message         string `db:"message"`         // 所以信息
 	Log_create_time string `db:"log_create_time"` // 创建上传日志的信息
-	Update_time     *string `db:"update_time"`
-	Create_time     *string `db:"create_time"`
+	Update_time     string `db:"update_time"`
+	Create_time     string `db:"create_time"`
 }
 
 type CustomError struct {
