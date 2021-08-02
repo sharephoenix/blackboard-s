@@ -1,7 +1,7 @@
 package model
 
 func (model CrashModel) InsertCrashLog(log CrashLogModelTable) error {
-	sqlString := `insert into ` + model.CrashLogTable + ` (id, mobile, user_id, log_url, messge, log_create_time) values (`
+	sqlString := `insert into ` + model.CrashLogTable + ` (id, mobile, user_id, log_url, message, log_create_time) values (`
 	sqlString += `"` + string(log.Id) + `"` + `,`
 	sqlString += `"` + log.Mobile + `"` + `,`
 	sqlString += `"` + log.User_id + `"` + `,`
@@ -12,7 +12,7 @@ func (model CrashModel) InsertCrashLog(log CrashLogModelTable) error {
 	sqlString += ` ON DUPLICATE KEY UPDATE log_url="` + log.Log_url + `"`
 	sqlString += `, mobile="` + log.Mobile + `"`
 	sqlString += `, user_id="` + log.User_id + `"`
-	sqlString += `, messge="` + log.Message + `"`
+	sqlString += `, message="` + log.Message + `"`
 	sqlString += `, log_create_time="` + log.Log_create_time + `"`
 	_, err := model.Exec(sqlString)
 	if err != nil {

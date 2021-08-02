@@ -45,6 +45,6 @@ type AppLogPostInfo struct {
 	Log_url         string `json:"log_url"`         // logUrl
 	Message         string `json:"message"`         // 所以信息
 	Log_create_time string `json:"log_create_time"` // 创建上传日志的信息
-	Update_time     *string `json:"update_time"`
-	Create_time     *string `json:"create_time"`
+	//Update_time     *string `json:"update_time"`
+	//Create_time     *string `json:"create_time"`
 }

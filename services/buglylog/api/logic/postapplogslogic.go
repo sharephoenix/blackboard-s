@@ -4,6 +4,7 @@ import (
 	buglylogicinfo "blackboards/services/buglylog/api/type"
 	"blackboards/services/buglylog/rpc/pb"
 	"context"
+	"fmt"
 )
 
 type PostCrashInfoLogicResponse struct {
@@ -15,6 +16,7 @@ type PostCrashInfoLogicResponse struct {
 func (logic CrashLogic)PostCrashInfos(request buglylogicinfo.AppLogPostInfoRequest) (PostCrashInfoLogicResponse, error) {
 	var success []string
 	var fails []string
+	fmt.Println("PostCrashInfos:", request.Infos)
 	for _, item := range request.Infos {
 		_, err := logic.BuglyRpcClient.InsertAppLogInfos(context.TODO(), &pb.AppLogsRequest{
 			Id: item.Id,
