@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fa3992-b0a1-4e47-9110-c0955352b4ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/services/iospodrecord/api/api.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/api/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/etc/crash_log_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/etc/crash_log_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/logic/buglyrpclogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/buglylog/rpc/model/crashlogmodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/buglylog/rpc/model/crashlogmodel.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../../go1.14.4" />
+  <component name="GOROOT" path="$USER_HOME$/go1.14.4" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
